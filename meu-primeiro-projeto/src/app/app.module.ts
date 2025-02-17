@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
 import { CicloDeVidaComponentesComponent } from './ciclo-de-vida-componentes/ciclo-de-vida-componentes.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { CicloDeVidaComponentesModule } from './ciclo-de-vida-componentes/ciclo-de-vida-componentes.module';
+import { DataBindingModule } from './data-binding/data-binding.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CicloDeVidaComponentesModule,
+    DataBindingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
