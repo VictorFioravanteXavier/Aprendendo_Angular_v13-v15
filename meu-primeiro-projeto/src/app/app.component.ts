@@ -5,7 +5,8 @@ import { Component, OnInit } from '@angular/core';
   template: `
   <!-- <app-ciclo-de-vida-componentes></app-ciclo-de-vida-componentes> -->
   <!-- <app-data-binding></app-data-binding> -->
-  <app-diretiva></app-diretiva>
+  <!-- <app-diretiva></app-diretiva> -->
+  <app-modules></app-modules>
   <router-outlet></router-outlet>
   `
 })

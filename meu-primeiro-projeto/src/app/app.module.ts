@@ -11,6 +11,8 @@ import { DataBindingModule } from './data-binding/data-binding.module';
 import { FormsModule } from '@angular/forms';
 import { DiretivaComponent } from './diretiva/diretiva.component';
 import { DiretivaModule } from './diretiva/diretiva.module';
+import { ModulesComponent } from './modules/modules.component';
+import { SharedModule } from './modules/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { DiretivaModule } from './diretiva/diretiva.module';
     TitleComponent,
     CicloDeVidaComponentesComponent,
     DataBindingComponent,
-    DiretivaComponent
+    DiretivaComponent,
+    ModulesComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { DiretivaModule } from './diretiva/diretiva.module';
     CicloDeVidaComponentesModule,
     DataBindingModule,
     FormsModule,
-    DiretivaModule
+    DiretivaModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
