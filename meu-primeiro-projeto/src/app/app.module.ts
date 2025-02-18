@@ -9,20 +9,24 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { CicloDeVidaComponentesModule } from './ciclo-de-vida-componentes/ciclo-de-vida-componentes.module';
 import { DataBindingModule } from './data-binding/data-binding.module';
 import { FormsModule } from '@angular/forms';
+import { DiretivaComponent } from './diretiva/diretiva.component';
+import { DiretivaModule } from './diretiva/diretiva.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     TitleComponent,
     CicloDeVidaComponentesComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    DiretivaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CicloDeVidaComponentesModule,
     DataBindingModule,
-    FormsModule
+    FormsModule,
+    DiretivaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

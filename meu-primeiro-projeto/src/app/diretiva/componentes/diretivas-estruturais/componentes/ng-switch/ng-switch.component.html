@@ -1,0 +1,14 @@
+<h2>NgSwitch</h2>
+
+<input type="text" name="nome" id="nome" [(ngModel)]="nome">
+<div [ngSwitch]="nome">
+    <p *ngSwitchCase="'aaaa'">
+        AAAA
+    </p>
+    <p *ngSwitchCase="'bbbb'">
+        BBBB
+    </p>
+    <p *ngSwitchDefault>
+        Deu ruim sua busca
+    </p>
+</div>

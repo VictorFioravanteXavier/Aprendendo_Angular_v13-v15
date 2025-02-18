@@ -1,0 +1,15 @@
+<h2>Ng-Template</h2>
+
+<ng-template [ngIf]="true">
+    <!-- É um elemento HTML que faz verificações antes do DOM ser carregado -->
+     <p>
+        true
+     </p>
+</ng-template>
+
+<ng-template ngFor let-item [ngForOf]="list">
+    <!-- É um elemento HTML que faz verificações antes do DOM ser carregado -->
+     <p>
+        {{item.nome}}
+     </p>
+</ng-template>
