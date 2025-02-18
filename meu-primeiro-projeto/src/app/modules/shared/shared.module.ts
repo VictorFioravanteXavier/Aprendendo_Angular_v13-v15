@@ -13,6 +13,7 @@ import { NewComponentComponent } from './new-component/new-component.component';
   ],
   exports: [
     NewComponentComponent
-  ]
+  ],
+  providers: []
 })
 export class SharedModule { }
