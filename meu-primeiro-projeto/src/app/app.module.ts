@@ -15,6 +15,8 @@ import { ModulesComponent } from './modules/modules.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { ComunicacaoEntreComponentesComponent } from './comunicacao-entre-componentes/comunicacao-entre-componentes.component';
 import { ComunicacaoEntreComponentesModule } from './comunicacao-entre-componentes/comunicacao-entre-componentes.module';
+import { ServicoHttpObservableComponent } from './servico-http-observable/servico-http-observable.component';
+import { ServicoHttpObservableModule } from './servico-http-observable/servico-http-observable.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { ComunicacaoEntreComponentesModule } from './comunicacao-entre-component
     DataBindingComponent,
     DiretivaComponent,
     ModulesComponent,
-    ComunicacaoEntreComponentesComponent
+    ComunicacaoEntreComponentesComponent,
+    ServicoHttpObservableComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { ComunicacaoEntreComponentesModule } from './comunicacao-entre-component
     FormsModule,
     DiretivaModule,
     SharedModule,
-    ComunicacaoEntreComponentesModule
+    ComunicacaoEntreComponentesModule,
+    ServicoHttpObservableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

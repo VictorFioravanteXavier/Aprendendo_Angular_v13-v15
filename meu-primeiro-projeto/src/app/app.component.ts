@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   <!-- <app-data-binding></app-data-binding> -->
   <!-- <app-diretiva></app-diretiva> -->
   <!-- <app-modules></app-modules> -->
-  <app-comunicacao-entre-componentes></app-comunicacao-entre-componentes>
+  <!-- <app-comunicacao-entre-componentes></app-comunicacao-entre-componentes> -->
+  <app-servico-http-observable></app-servico-http-observable>
   <router-outlet></router-outlet>
   `
 })
