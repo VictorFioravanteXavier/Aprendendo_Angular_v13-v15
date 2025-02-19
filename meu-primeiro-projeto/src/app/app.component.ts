@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   <!-- <app-ciclo-de-vida-componentes></app-ciclo-de-vida-componentes> -->
   <!-- <app-data-binding></app-data-binding> -->
   <!-- <app-diretiva></app-diretiva> -->
-  <app-modules></app-modules>
+  <!-- <app-modules></app-modules> -->
+  <app-comunicacao-entre-componentes></app-comunicacao-entre-componentes>
   <router-outlet></router-outlet>
   `
 })

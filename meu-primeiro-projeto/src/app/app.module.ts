@@ -13,6 +13,8 @@ import { DiretivaComponent } from './diretiva/diretiva.component';
 import { DiretivaModule } from './diretiva/diretiva.module';
 import { ModulesComponent } from './modules/modules.component';
 import { SharedModule } from './modules/shared/shared.module';
+import { ComunicacaoEntreComponentesComponent } from './comunicacao-entre-componentes/comunicacao-entre-componentes.component';
+import { ComunicacaoEntreComponentesModule } from './comunicacao-entre-componentes/comunicacao-entre-componentes.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { SharedModule } from './modules/shared/shared.module';
     CicloDeVidaComponentesComponent,
     DataBindingComponent,
     DiretivaComponent,
-    ModulesComponent
+    ModulesComponent,
+    ComunicacaoEntreComponentesComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import { SharedModule } from './modules/shared/shared.module';
     DataBindingModule,
     FormsModule,
     DiretivaModule,
-    SharedModule
+    SharedModule,
+    ComunicacaoEntreComponentesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
