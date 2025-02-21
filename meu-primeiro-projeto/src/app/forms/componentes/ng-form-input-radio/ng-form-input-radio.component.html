@@ -1,0 +1,19 @@
+<h2>NgForm + Input Radio</h2>
+<form #form="ngForm">
+    <label>
+        Masculino:
+        <input type="radio" name="sexo" value="Masculino" ngModel>
+    </label>
+    <br>
+    <label>
+        Feminino:
+        <input type="radio" name="sexo" value="Feminino" ngModel>
+    </label>
+    <br>
+    <label>
+        Outros:
+        <input type="radio" name="sexo" value="Outros" ngModel>
+    </label>
+</form>
+
+{{ form.value | json}}

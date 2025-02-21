@@ -1,0 +1,18 @@
+<h2>NgForm + Input Radio</h2>
+
+<form #form="ngForm">
+   <label>
+        Angular:
+        <input type="checkbox" name="angular" ngModel>
+   </label>
+   <label>
+        Vue:
+        <input type="checkbox" name="vue" ngModel> 
+    </label>
+    <label>
+        React:
+        <input type="checkbox" name="react" ngModel>
+    </label>
+</form>
+
+{{ form.value | json}}

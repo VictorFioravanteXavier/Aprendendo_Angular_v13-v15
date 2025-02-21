@@ -1,0 +1,22 @@
+<h2>NgForm + Erros</h2>
+
+<form #form="ngForm">
+    <label>
+        <input type="text" name="nome" #nome="ngModel" [ngModel]="nome.value" required>
+        <span *ngIf="!nome.valid && (!nome.dirty && !nome.touched)">
+            Invalid
+        </span>
+    </label>
+</form>
+<br>
+<br>
+Input Validation:
+{{ nome.valid }}
+{{ nome.dirty }}
+{{ nome.touched }}
+
+<br>
+<br>
+Form Validation:
+{{ form.valid }}
+<br>

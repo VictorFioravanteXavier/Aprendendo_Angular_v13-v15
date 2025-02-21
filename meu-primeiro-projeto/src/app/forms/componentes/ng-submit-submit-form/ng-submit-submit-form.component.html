@@ -1,0 +1,17 @@
+<h2>NgSubmit + Submit Form</h2>
+
+<form #form="ngForm" (ngSubmit)="submitForm(form)">
+    <label>
+        Nome:
+        <input type="text" name="nome" ngModel required>
+    </label>
+    <br>
+    <br>
+    <label>
+        Idade:
+        <input type="number" name="idade" ngModel required>
+    </label>
+    <br>
+    <br>
+    <button type="submit" [disabled]="form.invalid">Enviar dados</button>
+</form>
