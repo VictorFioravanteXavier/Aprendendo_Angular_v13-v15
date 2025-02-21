@@ -19,6 +19,8 @@ import { ServicoHttpObservableComponent } from './servico-http-observable/servic
 import { ServicoHttpObservableModule } from './servico-http-observable/servico-http-observable.module';
 import { FormsComponent } from './forms/forms.component';
 import { FormsComponentModule } from './forms/forms.module';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { ReactiveFormsComponenteModule } from './reactive-forms/reactive-forms.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { FormsComponentModule } from './forms/forms.module';
     ModulesComponent,
     ComunicacaoEntreComponentesComponent,
     ServicoHttpObservableComponent,
-    FormsComponent
+    FormsComponent,
+    ReactiveFormsComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { FormsComponentModule } from './forms/forms.module';
     SharedModule,
     ComunicacaoEntreComponentesModule,
     ServicoHttpObservableModule,
-    FormsComponentModule
+    FormsComponentModule,
+    ReactiveFormsComponenteModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
