@@ -21,6 +21,8 @@ import { FormsComponent } from './forms/forms.component';
 import { FormsComponentModule } from './forms/forms.module';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { ReactiveFormsComponenteModule } from './reactive-forms/reactive-forms.module';
+import { RoutesComponent } from './routes/routes.component';
+import { RoutesModule } from './routes/routes.module';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { ReactiveFormsComponenteModule } from './reactive-forms/reactive-forms.m
     ComunicacaoEntreComponentesComponent,
     ServicoHttpObservableComponent,
     FormsComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    RoutesComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import { ReactiveFormsComponenteModule } from './reactive-forms/reactive-forms.m
     ServicoHttpObservableModule,
     FormsComponentModule,
     ReactiveFormsComponenteModule,
+    RoutesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

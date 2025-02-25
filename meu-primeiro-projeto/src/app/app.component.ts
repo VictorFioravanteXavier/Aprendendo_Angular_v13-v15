@@ -10,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
   <!-- <app-comunicacao-entre-componentes></app-comunicacao-entre-componentes> -->
   <!-- <app-servico-http-observable></app-servico-http-observable> -->
   <!-- <app-forms></app-forms> -->
-  <app-reactive-forms></app-reactive-forms>
+  <!-- <app-reactive-forms></app-reactive-forms> -->
+  <app-routes></app-routes>
   <router-outlet></router-outlet>
   `
 })

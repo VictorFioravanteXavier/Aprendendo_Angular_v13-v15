@@ -1,0 +1,200 @@
+<!-- 
+No arquivo de rotas você vai colocar o path no caso o caminho de uma rota e o 
+componente que vai abrir com esse caminho:
+    const routes: Routes = [
+        {{'{'}} path: "", component: CicloDeVidaComponentesComponent{{'}'}}
+    ];
+
+path = caminho que vai abrir com um certo componente
+component = o componente que vai abrir com o pah
+pathMatch = é colocado no componenque que vai ser o start da aplicação
+ -->
+
+<!-- 
+Rota coringa:
+    const routes: Routes = [
+    {path: "**", component: PageErrorComponent},
+    ];
+
+É quando o path está como "**", no caso se não tiver uma página que o usuário acessou
+ele vai mandar para o componente especificado
+-->
+
+<!-- 
+RedirectTo:
+    const routes: Routes = [
+    {path: "404", component: PageErrorComponent},
+    {path: "**", redirectTo: "404"},
+    ];
+
+Caso alguem acesse certa rota você ira redireciona-lo para uma rota escolhida
+-->
+
+<!-- 
+RouterLik:
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a routerLink="/home">Home</a>
+                </li>
+                <li>
+                    <a routerLink="/sobre">Sobre</a>
+                </li>
+                <li>
+                    <a routerLink="['/404']">Error</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+Em vez de usar "href" do html se usa o routerLink não esqueça de importalo no modulo correto
+-->
+
+<!-- 
+RouterLinkActive:
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a routerLink="/home" [routerLinkActive]="['active']">Home</a>
+                </li>
+                <li>
+                    <a routerLink="/sobre" [routerLinkActive]="['active']">Sobre</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/404']" [routerLinkActive]="['active']">Error</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+Ele vai adicionar uma classe caso a rota esteja ativa.
+-->
+
+<!-- 
+RouterLinkActiveOptions:
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a [routerLink]="['/home']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Home</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/sobre']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Sobre</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/404']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Error</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+Deixa editar algumas coisas do "routerLinkActive" deixando o seu projeto mais proficional dependendo do caso
+-->
+
+<!-- 
+app-routing-module:
+    {path: "sobre/:id/:username", component: SobreComponent},
+
+
+ActivatedRoute:
+    constructor(
+        private activatedRoute: ActivatedRoute,
+    ) { }
+
+    ngOnInit(): void {
+        this.activatedRoute.params.subscribe(
+            (res) => console.log(res.id, res.username, res)
+        );
+
+        this.activatedRoute.queryParams.subscribe(
+            res => console.log(res)
+        )
+    }
+
+você vai caputurar valores predeterminados na rota selecionada
+no caso estamos pegando "id" e "username" esses atributos são pegos com "this.activatedRoute.params.subscribe"
+(tem que ser no componente.ts da rota selecioanda)
+
+e você pega paramentros pela url, exemplo, (http://localhost:4200/sobre/1/victor?id=1&nome=Victor), os paremtros
+depois da interrogação. Ele são capturados com o "this.activatedRoute.queryParams.subscribe"
+
+-->
+
+<!-- 
+Navegar pelo ts:
+    constructor(
+        private router: Router 
+    ) { }
+
+    this.router.navigate(['404']);
+    this.router.navigateByUrl('404');
+
+navigate => é recomendado pois ele não recarrega toda a aplicacação fazendo o site ficar mais rápido e leve
+navigateByUrl => ele não é recomendado pois ele recarrega toda a aplicação fazendo o site ficar mais lento
+-->
+
+<!-- 
+Rotas filhas:
+    {path: "sobre", component: SobreComponent, children: [
+        {path: "/victor", component: SobreComponent},
+    ]},
+
+Basta na parte de rotas você colocar o um "children" na rota pai 
+e colocar o nome do path que vai ter e o componente que vai abrir 
+-->
+
+<!-- 
+Carregamento tardio ou Lazy Loading:
+É usado geralmente para projetos grandes ele serve para carregar somente o necessario dependendo de onde o usuário entrar
+
+para fazelo basta colocar um arquivo de rotas em um componente junto com seu modulo como está no dashboard
+e fazer mais algumas coisas que você vai ter que pesquisar.
+
+app-routing.module.ts:
+    {
+        path: "dashboard", 
+        loadChildren: () => import('./routes/dashboard/dashboard.module').then( m => m.DashboardModule)
+    },
+
+dashboard.module.ts:
+    @NgModule({
+        declarations: [
+            HomeComponent
+        ],
+        imports: [
+            CommonModule,
+            DashboardRoutingModule
+        ]
+    })
+    export class DashboardModule { }
+
+
+dahboard-routing.module.ts:
+    const routes: Routes = [
+        {
+            path: '', component: HomeComponent
+        }
+    ];
+
+    @NgModule({
+        imports: [RouterModule.forChild(routes)],
+        exports: [RouterModule]
+    })
+    export class DashboardRoutingModule { }
+-->
+
+<!-- 
+Estrategia de Hash:
+É basicamente usar hastag na sua rota ele é util para navegadores antigos 
+e para usar o cordava, por exemplo, para fazer seu aplicativo web virar um app
+
+app-routing.module.ts:
+    imports: [RouterModule.forRoot(routes, {useHash: true})]
+
+basta colcoar esse comando dentro do "forRoot"
+
+-->
+
+<app-menu></app-menu>
