@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { NgFormErrorsComponent } from './ng-form-errors.component';
 
@@ -8,7 +9,8 @@ describe('NgFormErrorsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NgFormErrorsComponent ]
+      declarations: [ NgFormErrorsComponent ],
+      imports: [ FormsModule ] // Adicione o FormsModule aqui
     })
     .compileComponents();
   });

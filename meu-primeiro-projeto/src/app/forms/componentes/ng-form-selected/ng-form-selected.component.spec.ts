@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { NgFormSelectedComponent } from './ng-form-selected.component';
 
@@ -8,7 +9,8 @@ describe('NgFormSelectedComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NgFormSelectedComponent ]
+      declarations: [ NgFormSelectedComponent ],
+      imports: [ FormsModule ], // Adicione esta linha
     })
     .compileComponents();
   });

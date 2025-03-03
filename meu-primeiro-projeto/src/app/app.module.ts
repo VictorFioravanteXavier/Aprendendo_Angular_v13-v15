@@ -23,6 +23,8 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
 import { ReactiveFormsComponenteModule } from './reactive-forms/reactive-forms.module';
 import { RoutesComponent } from './routes/routes.component';
 import { RoutesModule } from './routes/routes.module';
+import { TesteUnitarioComponent } from './teste-unitario/teste-unitario.component';
+import { TesteUnitarioModule } from './teste-unitario/teste-unitario.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { RoutesModule } from './routes/routes.module';
     ServicoHttpObservableComponent,
     FormsComponent,
     ReactiveFormsComponent,
-    RoutesComponent
+    RoutesComponent,
+    TesteUnitarioComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,8 @@ import { RoutesModule } from './routes/routes.module';
     ServicoHttpObservableModule,
     FormsComponentModule,
     ReactiveFormsComponenteModule,
-    RoutesModule
+    RoutesModule,
+    TesteUnitarioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

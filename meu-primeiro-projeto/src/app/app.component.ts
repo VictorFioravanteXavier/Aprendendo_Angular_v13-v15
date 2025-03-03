@@ -11,7 +11,8 @@ import { Component, OnInit } from '@angular/core';
   <!-- <app-servico-http-observable></app-servico-http-observable> -->
   <!-- <app-forms></app-forms> -->
   <!-- <app-reactive-forms></app-reactive-forms> -->
-  <app-routes></app-routes>
+  <!-- <app-routes></app-routes> -->
+  <app-teste-unitario></app-teste-unitario>
   <router-outlet></router-outlet>
   `
 })

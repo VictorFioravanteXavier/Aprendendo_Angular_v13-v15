@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms'; // Importe o FormsModule
 import { NgFormInputRadioComponent } from './ng-form-input-radio.component';
 
 describe('NgFormInputRadioComponent', () => {
@@ -8,7 +8,8 @@ describe('NgFormInputRadioComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NgFormInputRadioComponent ]
+      declarations: [ NgFormInputRadioComponent ],
+      imports: [ FormsModule ] // Adicione o FormsModule aqui
     })
     .compileComponents();
   });

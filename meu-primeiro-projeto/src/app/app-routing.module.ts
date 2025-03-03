@@ -7,7 +7,7 @@ import { SobreComponent } from './routes/pages/sobre/sobre.component';
 import { PageErrorComponent } from './routes/pages/page-error/page-error.component';
 
 const routes: Routes = [
-  {path: "home", component: HomeComponent},
+  /* {path: "home", component: HomeComponent},
   {path: "sobre", component: SobreComponent, children: [
     {path: ":victor", component: SobreComponent},
   ]},
@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./routes/dashboard/dashboard.module').then( m => m.DashboardModule)
   },
   {path: "404", component: PageErrorComponent},
-  {path: "**", redirectTo: "404"},
+  {path: "**", redirectTo: "404"}, */
 ];
 
 @NgModule({
