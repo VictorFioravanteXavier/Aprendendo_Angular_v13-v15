@@ -25,6 +25,8 @@ import { RoutesComponent } from './routes/routes.component';
 import { RoutesModule } from './routes/routes.module';
 import { TesteUnitarioComponent } from './teste-unitario/teste-unitario.component';
 import { TesteUnitarioModule } from './teste-unitario/teste-unitario.module';
+import { RoutesGuardsComponent } from './routes-guards/routes-guards.component';
+import { RoutesGuardsModule } from './routes-guards/routes-guards.module';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { TesteUnitarioModule } from './teste-unitario/teste-unitario.module';
     FormsComponent,
     ReactiveFormsComponent,
     RoutesComponent,
-    TesteUnitarioComponent
+    TesteUnitarioComponent,
+    RoutesGuardsComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ import { TesteUnitarioModule } from './teste-unitario/teste-unitario.module';
     FormsComponentModule,
     ReactiveFormsComponenteModule,
     RoutesModule,
-    TesteUnitarioModule
+    TesteUnitarioModule,
+    RoutesGuardsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

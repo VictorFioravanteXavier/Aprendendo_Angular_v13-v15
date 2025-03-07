@@ -6,6 +6,9 @@ import { HomeComponent } from './routes/pages/home/home.component';
 import { SobreComponent } from './routes/pages/sobre/sobre.component';
 import { PageErrorComponent } from './routes/pages/page-error/page-error.component';
 
+// Routes Guards
+import { RoutesGuardsComponent } from './routes-guards/routes-guards.component';
+
 const routes: Routes = [
   /* {path: "home", component: HomeComponent},
   {path: "sobre", component: SobreComponent, children: [
@@ -17,6 +20,10 @@ const routes: Routes = [
   },
   {path: "404", component: PageErrorComponent},
   {path: "**", redirectTo: "404"}, */
+  {
+    path: 'routes-guards', 
+    loadChildren: () => import('./routes-guards/routes-guards.module').then(m => m.RoutesGuardsModule)
+  }
 ];
 
 @NgModule({

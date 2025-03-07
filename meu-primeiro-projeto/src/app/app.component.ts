@@ -12,7 +12,8 @@ import { Component, OnInit } from '@angular/core';
   <!-- <app-forms></app-forms> -->
   <!-- <app-reactive-forms></app-reactive-forms> -->
   <!-- <app-routes></app-routes> -->
-  <app-teste-unitario></app-teste-unitario>
+  <!-- <app-teste-unitario></app-teste-unitario> -->
+  <!-- <app-routes-guards><app-routes-guards> -->
   <router-outlet></router-outlet>
   `
 })
